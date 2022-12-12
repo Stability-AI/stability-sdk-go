@@ -23,6 +23,7 @@ func main() {
 	if decodeErr != nil {
 		fmt.Println(fmt.Sprintf("WARNING: %v", decodeErr))
 	}
+	metadata.RemoveBinaryData(rq)
 	t := prototext.Format(rq)
 	fmt.Println(t)
 }
