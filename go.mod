@@ -1,6 +1,6 @@
 module github.com/Stability-AI/stability-sdk-go
 
-go 1.19
+go 1.18
 
 require (
 	github.com/dsoprea/go-exif v0.0.0-20221012082141-d21ac8e2de85
