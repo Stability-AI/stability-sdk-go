@@ -1,4 +1,4 @@
-module github.com/Stability-AI/stability-sdk-go
+module github.com/stability-ai/stability-sdk-go
 
 go 1.18
 

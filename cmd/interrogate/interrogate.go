@@ -2,7 +2,7 @@ package interrogate
 
 import (
 	"fmt"
-	"github.com/Stability-AI/stability-sdk-go/metadata"
+	"github.com/stability-ai/stability-sdk-go/metadata"
 	"google.golang.org/protobuf/encoding/prototext"
 	"io/ioutil"
 	"os"
