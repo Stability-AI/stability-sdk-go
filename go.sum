@@ -91,6 +91,8 @@ github.com/shogo82148/go-shuffle v0.0.0-20180218125048-27e6095f230d/go.mod h1:2h
 github.com/shurcooL/sanitized_anchor_name v1.0.0/go.mod h1:1NzhyTcUVG4SuEtjjoZeVRXNmyL/1OwPU0+IJeTBvfc=
 github.com/stability-ai/api-interfaces/gooseai v0.0.0-20221130223338-c853ef64a06f h1:KqozgfKdWNL9o1tcfKNS3XF6OtLg35Rzq9SHavQXO5Q=
 github.com/stability-ai/api-interfaces/gooseai v0.0.0-20221130223338-c853ef64a06f/go.mod h1:LKeWfajW1hcJp4T6dAXCmXLg9NN+kfbjbfneiK+2kVo=
+github.com/stability-ai/api-interfaces/gooseai v0.0.0-20221215202553-ee6fe1f087db h1:znPJNI5TAPR68Qx9FdGD3s1+SLwj37V3BEvwnlaWUxg=
+github.com/stability-ai/api-interfaces/gooseai v0.0.0-20221215202553-ee6fe1f087db/go.mod h1:LKeWfajW1hcJp4T6dAXCmXLg9NN+kfbjbfneiK+2kVo=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=

@@ -8,7 +8,7 @@ require (
 	github.com/dsoprea/go-logging v0.0.0-20200710184922-b02d349568dd
 	github.com/dsoprea/go-png-image-structure v0.0.0-20210512210324-29b889a6093d
 	github.com/nofeaturesonlybugs/z85 v1.0.2
-	github.com/stability-ai/api-interfaces/gooseai v0.0.0-20221130223338-c853ef64a06f
+	github.com/stability-ai/api-interfaces/gooseai v0.0.0-20221215202553-ee6fe1f087db
 	github.com/wbrown/gpt_bpe v0.0.0-20221128171935-82d9c76b4b66
 	google.golang.org/protobuf v1.28.1
 )
