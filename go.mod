@@ -3,13 +3,19 @@ module github.com/stability-ai/stability-sdk-go
 go 1.18
 
 require (
+	github.com/disintegration/imaging v1.6.2
 	github.com/dsoprea/go-exif v0.0.0-20221012082141-d21ac8e2de85
 	github.com/dsoprea/go-exif/v2 v2.0.0-20221012082141-d21ac8e2de85
 	github.com/dsoprea/go-logging v0.0.0-20200710184922-b02d349568dd
 	github.com/dsoprea/go-png-image-structure v0.0.0-20210512210324-29b889a6093d
+	github.com/esimov/stackblur-go v1.1.0
+	github.com/foobaz/lossypng v0.0.0-20200814224715-48fa8819852a
+	github.com/lucasb-eyer/go-colorful v1.2.0
+	github.com/mazznoer/colorgrad v0.9.1
 	github.com/nofeaturesonlybugs/z85 v1.0.2
 	github.com/stability-ai/api-interfaces/gooseai v0.0.0-20221215202553-ee6fe1f087db
 	github.com/wbrown/gpt_bpe v0.0.0-20221128171935-82d9c76b4b66
+	golang.org/x/image v0.0.0-20220302094943-723b81ca9867
 	google.golang.org/protobuf v1.28.1
 )
 
@@ -25,6 +31,7 @@ require (
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/jdkato/prose/v2 v2.0.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
+	github.com/mazznoer/csscolorparser v0.1.2 // indirect
 	github.com/mingrammer/commonregex v1.0.1 // indirect
 	github.com/nofeaturesonlybugs/errors v1.1.1 // indirect
 	golang.org/x/net v0.0.0-20220722155237-a158d28d115b // indirect
