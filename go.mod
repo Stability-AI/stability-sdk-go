@@ -15,6 +15,7 @@ require (
 	github.com/nofeaturesonlybugs/z85 v1.0.2
 	github.com/stability-ai/api-interfaces/gooseai v0.0.0-20221215202553-ee6fe1f087db
 	github.com/wbrown/gpt_bpe v0.0.0-20221128171935-82d9c76b4b66
+	github.com/yargevad/filepathx v1.0.0
 	golang.org/x/image v0.0.0-20220302094943-723b81ca9867
 	google.golang.org/protobuf v1.28.1
 )
