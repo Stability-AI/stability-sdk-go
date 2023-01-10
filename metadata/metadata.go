@@ -6,6 +6,7 @@ import (
 	"github.com/dsoprea/go-exif"
 	"github.com/nofeaturesonlybugs/z85"
 	"github.com/stability-ai/api-interfaces/gooseai/generation"
+	"github.com/stability-ai/stability-sdk-go/stability_image"
 	"github.com/wbrown/gpt_bpe"
 	"google.golang.org/protobuf/proto"
 	"strings"
@@ -113,4 +114,19 @@ func DecodeRequest(img *[]byte) (*generation.Request, error) {
 			unmarshalErr)
 	}
 	return request, unmarshalErr
+}
+
+func RequantizePreserveMetadata(png *[]byte) (qzd *[]byte, err error) {
+	rq, decodeErr := DecodeRequest(png)
+	if decodeErr != nil {
+		return png, decodeErr
+	} else {
+		reencoded, encodeErr := stability_image.QuantizePng(png,
+			4)
+		if encodeErr != nil {
+			return png, encodeErr
+		} else {
+			return EmbedRequest(rq, reencoded)
+		}
+	}
 }
