@@ -21,7 +21,7 @@ import (
 
 var (
 	MaxDimension     uint64 = 1536
-	MinDimension     uint64 = 512
+	MinDimension     uint64 = 256
 	MaxPixels        uint64 = 960 * 1024
 	MinPixels        uint64 = 768 * 768
 	DefaultDimension uint64 = 768
@@ -382,8 +382,8 @@ func init() {
 
 	DefaultAspectRatios := NewAspectRatios(MaxPixels,
 		DimensionStep,
-		256,
-		1534)
+		MinDimension,
+		MaxDimension)
 
 	for _, ar := range DefaultAspectRatios.Table {
 		log.Printf("aspect ratio: %s - %dx%d", ar.Label, ar.WidthPixels,
