@@ -3,14 +3,21 @@ package metadata
 import (
 	"errors"
 	"fmt"
+	"strings"
+
 	"github.com/dsoprea/go-exif"
 	"github.com/nofeaturesonlybugs/z85"
 	"github.com/stability-ai/api-interfaces/gooseai/generation"
 	"github.com/stability-ai/stability-sdk-go/stability_image"
 	"github.com/wbrown/gpt_bpe"
 	"google.golang.org/protobuf/proto"
-	"strings"
 )
+
+var clipEncoder gpt_bpe.GPTEncoder
+
+func init() {
+	clipEncoder = gpt_bpe.NewCLIPEncoder()
+}
 
 // decodePbTokens decodes the given `generation.Tokens` into a string. It
 // assumes that the tokens are encoded using CLIP.
@@ -19,7 +26,7 @@ func decodePbTokens(pbTokens *generation.Tokens) string {
 	for _, pbToken := range pbTokens.Tokens {
 		tokens = append(tokens, (gpt_bpe.Token)(pbToken.Id))
 	}
-	decoded := gpt_bpe.CLIPEncoder.Decode(&tokens)
+	decoded := clipEncoder.Decode(&tokens)
 	trimmedLeft := strings.TrimPrefix(decoded, "<|startoftext|>")
 	trimmedRight := strings.TrimSuffix(trimmedLeft, "<|endoftext|>")
 	return trimmedRight
