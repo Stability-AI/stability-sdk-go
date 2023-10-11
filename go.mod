@@ -35,9 +35,9 @@ require (
 	github.com/mazznoer/csscolorparser v0.1.3 // indirect
 	github.com/mingrammer/commonregex v1.0.1 // indirect
 	github.com/nofeaturesonlybugs/errors v1.1.1 // indirect
-	golang.org/x/net v0.10.0 // indirect
-	golang.org/x/sys v0.8.0 // indirect
-	golang.org/x/text v0.9.0 // indirect
+	golang.org/x/net v0.17.0 // indirect
+	golang.org/x/sys v0.13.0 // indirect
+	golang.org/x/text v0.13.0 // indirect
 	gonum.org/v1/gonum v0.13.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230530153820-e85fd2cbaebc // indirect
 	google.golang.org/grpc v1.55.0 // indirect
