@@ -16,7 +16,7 @@ require (
 	github.com/stability-ai/api-interfaces/gooseai v0.0.0-20230421224306-f3a50851f8ea
 	github.com/wbrown/gpt_bpe v0.0.0-20230530152356-7c82f97f1e93
 	github.com/yargevad/filepathx v1.0.0
-	golang.org/x/image v0.7.0
+	golang.org/x/image v0.10.0
 	google.golang.org/protobuf v1.30.0
 )
 
@@ -37,7 +37,7 @@ require (
 	github.com/nofeaturesonlybugs/errors v1.1.1 // indirect
 	golang.org/x/net v0.10.0 // indirect
 	golang.org/x/sys v0.8.0 // indirect
-	golang.org/x/text v0.9.0 // indirect
+	golang.org/x/text v0.11.0 // indirect
 	gonum.org/v1/gonum v0.13.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230530153820-e85fd2cbaebc // indirect
 	google.golang.org/grpc v1.55.0 // indirect
