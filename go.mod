@@ -17,7 +17,7 @@ require (
 	github.com/wbrown/gpt_bpe v0.0.0-20230530152356-7c82f97f1e93
 	github.com/yargevad/filepathx v1.0.0
 	golang.org/x/image v0.7.0
-	google.golang.org/protobuf v1.30.0
+	google.golang.org/protobuf v1.33.0
 )
 
 require (
