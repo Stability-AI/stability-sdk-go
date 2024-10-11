@@ -2,12 +2,6 @@ package stability_image
 
 import (
 	"bytes"
-	"github.com/disintegration/imaging"
-	"github.com/esimov/stackblur-go"
-	"github.com/foobaz/lossypng/lossypng"
-	"github.com/lucasb-eyer/go-colorful"
-	"github.com/mazznoer/colorgrad"
-	"golang.org/x/image/webp"
 	"image"
 	"image/color"
 	"image/gif"
@@ -17,6 +11,13 @@ import (
 	"math/rand"
 	"os"
 	"strconv"
+
+	"github.com/disintegration/imaging"
+	"github.com/esimov/stackblur-go"
+	"github.com/foobaz/lossypng/lossypng"
+	"github.com/mazznoer/colorgrad"
+	"github.com/mazznoer/csscolorparser"
+	"golang.org/x/image/webp"
 )
 
 var (
@@ -262,36 +263,36 @@ func CreateGradient(
 	gradientDirection Direction,
 ) (i *image.RGBA) {
 	i = image.NewRGBA(gradientDim)
-	var gradientColorFn func(x, y int) colorful.Color
+	var gradientColorFn func(x, y int) csscolorparser.Color
 	switch gradientDirection {
 	case DirectionUp:
-		gradientColorFn = func(x, y int) colorful.Color {
+		gradientColorFn = func(x, y int) csscolorparser.Color {
 			scaled := float64(y) / float64(gradientDim.Max.Y)
 			return outpaintGradient.At(scaled)
 		}
 	case DirectionDown:
-		gradientColorFn = func(x, y int) colorful.Color {
+		gradientColorFn = func(x, y int) csscolorparser.Color {
 			scaled := float64(y) / float64(gradientDim.Max.Y)
 			return outpaintGradient.At(1 - scaled)
 		}
 	case DirectionLeft:
-		gradientColorFn = func(x, y int) colorful.Color {
+		gradientColorFn = func(x, y int) csscolorparser.Color {
 			scaled := float64(x) / float64(gradientDim.Max.X)
 			return outpaintGradient.At(scaled)
 		}
 	case DirectionRight:
-		gradientColorFn = func(x, y int) colorful.Color {
+		gradientColorFn = func(x, y int) csscolorparser.Color {
 			scaled := float64(x) / float64(gradientDim.Max.X)
 			return outpaintGradient.At(1 - scaled)
 		}
 	case DirectionCenter:
 		if gradientDim.Max.Y > gradientDim.Max.X {
-			gradientColorFn = func(x, y int) colorful.Color {
+			gradientColorFn = func(x, y int) csscolorparser.Color {
 				scaled := float64(x) / float64(gradientDim.Max.X)
 				return outpaintGradient.At(1 - scaled)
 			}
 		} else {
-			gradientColorFn = func(x, y int) colorful.Color {
+			gradientColorFn = func(x, y int) csscolorparser.Color {
 				scaled := float64(y) / float64(gradientDim.Max.Y)
 				return outpaintGradient.At(1 - scaled)
 			}
