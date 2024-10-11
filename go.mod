@@ -10,8 +10,8 @@ require (
 	github.com/dsoprea/go-png-image-structure v0.0.0-20210512210324-29b889a6093d
 	github.com/esimov/stackblur-go v1.1.0
 	github.com/foobaz/lossypng v0.0.0-20200814224715-48fa8819852a
-	github.com/lucasb-eyer/go-colorful v1.2.0
 	github.com/mazznoer/colorgrad v0.10.0
+	github.com/mazznoer/csscolorparser v0.1.5
 	github.com/nofeaturesonlybugs/z85 v1.0.2
 	github.com/stability-ai/api-interfaces/gooseai v0.0.0-20240723165813-5b475498665c
 	github.com/wbrown/gpt_bpe v0.0.0-20240927210347-534087680bf6
@@ -32,7 +32,6 @@ require (
 	github.com/hashicorp/golang-lru v1.0.2 // indirect
 	github.com/jdkato/prose/v2 v2.0.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
-	github.com/mazznoer/csscolorparser v0.1.5 // indirect
 	github.com/mingrammer/commonregex v1.0.1 // indirect
 	github.com/nofeaturesonlybugs/errors v1.1.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
