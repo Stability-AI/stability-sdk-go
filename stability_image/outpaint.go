@@ -2,12 +2,14 @@ package stability_image
 
 import (
 	"fmt"
-	"github.com/disintegration/imaging"
-	"github.com/mazznoer/colorgrad"
 	"image"
 	"image/color"
 	"image/png"
 	"strings"
+
+	"github.com/disintegration/imaging"
+	"github.com/mazznoer/colorgrad"
+	"github.com/mazznoer/csscolorparser"
 )
 
 var (
@@ -560,11 +562,14 @@ func PrepareOutpaintImage(
 	extDomain := float64(extensionSize) / gradientDomain
 	outpaintDomain := float64(outpaintEdge) / gradientDomain
 
+	r, g, b, a := color.Gray16{Y: opts.MaskBackground}.RGBA()
+	r2, g2, b2, a2 := color.Gray16{Y: 128}.RGBA()
+
 	outpaintGradients, _ := colorgrad.NewGradient().
 		Colors(
-			color.Gray16{opts.MaskBackground},
-			color.Gray{Y: 128},
-			color.Black,
+			csscolorparser.Color{R: float64(r), G: float64(g), B: float64(b), A: float64(a)},
+			csscolorparser.Color{R: float64(r2), G: float64(g2), B: float64(b2), A: float64(a2)},
+			csscolorparser.Color{R: 0, G: 0, B: 0, A: 0},
 		).Domain(
 		0,
 		outpaintDomain,
